@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório Aula 3</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3xJpbLh5_ythueSPv8XubvqvJWhb5GviZIQ&s" alt="comida" height="110" width="1870">
+        </header>
+        <nav>
+            <label for="nav">Home | Cardápio | Shows | Posts | Contato</label>
+        </nav>
+        <div class="content">
+            <main>
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-EJA-KPjsdy6ySjfLxlbq5da1FYGHR8e1lQ&s" alt="tacaca">
+                    <h3>Tacacá melhor do Pará</h3>
+                    <h2>Com muito jambú e camarão</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ratione sed fugiat eaque.</p>
+                </article>
+                
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHPNPRJk5jiTCbpSYHcXqmmCZ6vvc6qac6tQ&s" alt="tambaqui">
+                    <h3>Tambaqui Assado, o peixe mais delicioso do Amazonas</h3>
+                    <h2>O mais pedido</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Orem ipsum dolor.</p>
+                </article>
+            </main>
+
+            <aside>
+                <section>
+                    <h2>Mais Populares</h2>
+                    <ul>
+                        <li><a href="https://www.google.com">Tambaqui de forno</a></li>
+                        <li><a href="https://www.google.com">Tacacá</a></li>
+                        <li><a href="https://www.google.com">Camarão Empanado</a></li>
+                        <li><a href="https://www.google.com">Filé de Frango</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Contato</h2>
+                    <p>Tambaqui de Banda</p>
+                    <p>Manaus</p>
+                    <p>Amazonas</p>
+                    <p>(92) 99123-4567</p>
+                </section>
+            </aside>
+        </div>
+        <footer>
+            <label for="footer">Todos os Direitos Reservados ao Tambaqui</label>
+        </footer>
+    </div>
+</body>
+
+<style>
+    footer{
+        background-color: grey;
+        color: #FFF;
+        padding: 10px;
+    }
+    nav {
+        background-color: grey;
+        color: #FFF;
+        padding: 10px;
+        text-align: center;
+    }
+    /* nav label:hover {
+        text-decoration: underline;
+    } */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .content {
+        display: flex;
+        flex: 1;
+    }
+    main {
+        flex: 3;
+        padding: 20px;
+    }
+    aside {
+        flex: 1;
+        background-color: #f4f4f4;
+        padding: 20px;
+        margin-left: 20px;
+    }
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</html>
