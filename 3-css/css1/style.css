@@ -1,0 +1,10 @@
+p {
+    width: 400px;
+    border: 5px solid black;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-left: 30px;
+    background-color: grey;
+}

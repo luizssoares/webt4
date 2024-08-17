@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div {
+    position: relative;
+}
+
+div.blue { 
+    width:100px;
+    height:200px; 
+    background-color:blue; 
+    float: left;
+}
+div.yellow { 
+    width:100px; 
+    height:150px; 
+    background-color:yellow;
+    float: left; 
+}
+div.red { 
+    width:100px; 
+    height:150px; 
+    background-color:red;
+    float: left; 
+}
+div.green { 
+    width:200px; 
+    height:50px; 
+    background-color:green; 
+    align-self: flex-end;
+    left: -200px;
+}

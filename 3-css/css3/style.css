@@ -1,0 +1,22 @@
+body{
+    width: 200px;
+    background-image: url(https://images.ecycle.com.br/wp-content/uploads/2022/01/24131543/maldives-g03da4943c_1920.jpg.webp);
+    padding-top: 100px;
+    padding-left: 50px;
+}
+p{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-block: 10px;
+}
+
+h3 {
+    color:black;
+    padding-left: 20px;
+
+}
+#centro {
+    border: solid yellow;
+    border-radius:10px;
+    border-width: 5px;
+}
