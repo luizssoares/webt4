@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafico de Barras</title>
+</head>
+<body>
+    
+    <h1>Um Gráfico de Barras</h1>
+
+    <div id="divAltura">
+        <label for="a">Informe a altura das barras</label>
+        <input class="altura" type="number" id="a">
+        <input class="altura" type="number" id="a">
+        <input class="altura" type="number" id="a">
+        <input class="altura" type="number" id="a">
+        <input class="altura" type="number" id="a">
+    </div>
+
+    <div id="divLargura">
+        <label for="largura">Informe a largura das barras</label>
+        <input type="number" id="largura">
+    </div>
+
+    <div>
+        <button id="botao" onclick="fazTudo()">Desenhar Gráfico</button>
+    </div>
+
+
+    <div id="divMae">
+        <div class="flex" id="b1"></div>
+        <div class="flex" id="b2"></div>
+        <div class="flex" id="b3"></div>
+        <div class="flex" id="b4"></div>
+        <div class="flex" id="b5"></div>
+    </div>
+</body>
+
+<script>
+    document.getElementById("botao").addEventListener("click", function() {
+    const alturas = document.querySelectorAll(".altura");
+    const largura = document.getElementById("largura").value;
+    const barras = document.querySelectorAll(".flex");
+
+    alturas.forEach((altura, index) => {
+        const valorAltura = altura.value;
+        if (valorAltura) {
+            barras[index].style.height = `${valorAltura}px`;
+            barras[index].style.width = `${largura}px`;
+            barras[index].style.backgroundColor = "blue"; 
+        }
+    });
+});
+
+</script> 
+
+
+<style>
+input {
+    padding: 20px;
+    width: 100px;
+}
+#divLargura {
+    padding: 10px;
+}
+#divAltura {
+    padding: 10px;
+}
+
+button {
+    padding: 15px;
+}
+
+#divMae {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+#divMae .flex {
+    margin: 10px;
+    padding: 30px;
+    align-items: flex-end; 
+    
+}
+
+
+</style>
+
+</html>

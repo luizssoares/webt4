@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Calculadora</h1>
+
+<main>
+    <div id="divDoRaio">
+        <label for="raio">Informe o raio</label>
+        <input type="number" id="raio">
+        <button onclick="calcula()">Calcular</button>
+    </div>
+    <div id="divDoCirculo">
+        <label for="circulo">Area do circulo</label>
+        <input type="number" id="circulo" readonly>
+    </div>
+    <div id="divDoCircunferencia">
+        <label for="circunferencia">Circunferencia</label>
+        <input type="number" id="circunferencia" readonly>
+    </div>
+</main>
+
+<!-- Area do circulo = (3.14 * numeroRaio)² -->
+<!-- circunferencia = 2(3.14 * numeroRaio) -->
+
+<script>
+    function calcula() {
+        var numeroRaio = document.getElementById("raio").value;
+        var pi = 3.14;
+
+        // Calcula a área do círculo
+        var area = pi * Math.pow(numeroRaio, 2);
+
+        // Calcula a circunferência
+        var circunferencia = 2 * pi * numeroRaio;
+
+        // Atualiza os campos com os resultados
+        document.getElementById("circulo").value = area.toFixed(2);
+        document.getElementById("circunferencia").value = circunferencia.toFixed(2);
+        
+    }
+</script>
+
+</body>
+
+<style>
+    #divDoRaio {
+        padding: 10px;
+    }
+    #divDoCirculo {
+        padding: 10px;
+    }
+    #divDoCircunferencia{
+        padding: 10px;
+   }
+
+</style>
+</html>
