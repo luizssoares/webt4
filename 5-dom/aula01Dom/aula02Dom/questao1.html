@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Várias listas</h1>
+
+  <div>
+    <p id="lista-titulo" name="lista">Lista de itens:</p>
+  </div>
+
+  <ul id="lista-itens-1">
+    <li id="one" class="hot">item a</li>
+    <li id="two" class="hot">item b</li>
+    <li id="three" class="hot">item c</li>
+    <li id="four">item d</li>
+  </ul>
+</body>
+
+<script>
+
+  let listaElementos = document.getElementById("lista-itens-1");
+
+  let primeiroElemento = listaElementos.firstElementChild
+  console.log("Primeiro filho:", primeiroElemento)
+
+  let segundoElemento = listaElementos.lastElementChild
+  console.log("Primeiro filho:", segundoElemento)
+
+  let elementoPai = listaElementos.parentElement
+  console.log("Elemento Pai da Lista:", elementoPai)
+
+  let filhos = listaElementos.children;
+  for (i = 0; i < filhos.length; i++) {
+      console.log("Filho" + (i + 1) + ":", filhos[i]);
+  }
+
+
+
+var elemento2 = document.getElementById("two");
+var pai = elemento2.parentElement;
+var filhos2 = pai.children;
+
+console.log('Irmãos do id "two":');
+for (var i = 0; i < filhos2.length; i++) {
+    if (filhos2[i] != elemento2) {
+        console.log(filhos2[i]);
+    }
+}
+
+
+
+
+</script>
+</html>

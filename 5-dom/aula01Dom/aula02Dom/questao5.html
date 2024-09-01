@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>To-do</h1>
+
+    <div>
+        <p id="lista-titulo" name="lista">Lista de atividades:</p>
+    </div>
+
+    <div>
+        <input id="inputDoUsuario" placeholder="Digite aqui o item" />
+        <button id="botaoAdicionar">Adicionar</button>
+    </div>
+
+    <ul id="lista-itens">
+        <li>item a</li>
+    </ul>
+
+    <div>
+        <button id="botaoRemover">Remover último item</button>
+    </div>
+  </body>
+
+
+  <script>
+    function adicionarItem() {
+        const inputDoUsuario = document.getElementById("inputDoUsuario");
+        const inputValue = inputDoUsuario.value.trim();
+
+        if (inputValue != "") {
+            const novoItem = document.createElement('li');
+            novoItem.textContent = inputValue;
+
+            const itemLista = document.getElementById("lista-itens");
+            itemLista.appendChild(novoItem);
+            inputDoUsuario.value = "";
+
+        } else {
+            alert("O item não pode ser vazio.");
+        }
+    }
+
+    function removerItem() {
+        const itemLista = document.getElementById("lista-itens");
+
+        if (itemLista.children.length > 0) {
+            itemLista.removeChild(itemLista.lastChild);
+        } else {
+            alert("A lista já está vazia.");
+        }
+    }
+
+    document.getElementById("botaoAdicionar").addEventListener("click", adicionarItem);
+    document.getElementById("botaoRemover").addEventListener("click", removerItem);
+</script>
+</html>
